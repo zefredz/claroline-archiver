@@ -1,0 +1,33 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "bfefc3b5cd22f1c558d91429998c327b",
+    "packages": [
+        {
+            "name": "zefredz/htmlsanitizer",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zefredz/htmlsanitizer",
+                "reference": "67736e26c248c0a6848a2356c8ae88a129f7cece"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "."
+                ]
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

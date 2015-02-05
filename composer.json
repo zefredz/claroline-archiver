@@ -1,0 +1,22 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "zefredz/htmlsanitizer",
+                "version": "1.0.1",
+                "source": {
+                    "url": "https://github.com/zefredz/htmlsanitizer",
+                    "type": "git",
+                    "reference": "67736e26c248c0a6848a2356c8ae88a129f7cece"
+                },
+                "autoload": {
+                    "classmap": ["."]
+                }
+            }
+        }
+    ],
+    "require": {
+        "zefredz/htmlsanitizer": "1.*"
+    }
+}
