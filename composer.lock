@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bfefc3b5cd22f1c558d91429998c327b",
+    "hash": "913a79629c42d328294906e514aa6e76",
     "packages": [
         {
             "name": "zefredz/htmlsanitizer",
@@ -20,6 +20,45 @@
                     "."
                 ]
             }
+        },
+        {
+            "name": "zip-factory/zip-factory",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yani-/zip-factory.git",
+                "reference": "bbf202f9c183d5885aa5cce905fc50782eea10b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yani-/zip-factory/zipball/bbf202f9c183d5885aa5cce905fc50782eea10b9",
+                "reference": "bbf202f9c183d5885aa5cce905fc50782eea10b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yani Iliev",
+                    "email": "yani@iliev.me",
+                    "homepage": "https://yani.iliev.me",
+                    "role": "developer"
+                }
+            ],
+            "description": "Factory class that creates either ZipArchive or PclZip PHP 5.2.17 and up",
+            "homepage": "http://github.com/yani-/zip-factory",
+            "keywords": [
+                "zip",
+                "ziparchive",
+                "zipfactory"
+            ],
+            "time": "2014-11-11 19:43:17"
         }
     ],
     "packages-dev": [],

@@ -17,6 +17,7 @@
         }
     ],
     "require": {
-        "zefredz/htmlsanitizer": "1.*"
+        "zefredz/htmlsanitizer": "1.*",
+        "zip-factory/zip-factory": "1.*"
     }
 }
