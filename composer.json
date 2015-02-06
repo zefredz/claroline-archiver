@@ -1,24 +1,51 @@
 {
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "zefredz/htmlsanitizer",
-                "version": "1.0.1",
-                "source": {
-                    "url": "https://github.com/zefredz/htmlsanitizer",
-                    "type": "git",
-                    "reference": "67736e26c248c0a6848a2356c8ae88a129f7cece"
-                },
-                "autoload": {
-                    "classmap": ["."]
-                }
-            }
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "zefredz/htmlsanitizer",
+        "version": "1.0.1",
+        "source": {
+          "url": "https://github.com/zefredz/htmlsanitizer",
+          "type": "git",
+          "reference": "67736e26c248c0a6848a2356c8ae88a129f7cece"
+        },
+        "autoload": {
+          "classmap": ["."]
         }
-    ],
-    "require": {
-        "zefredz/htmlsanitizer": "1.*",
-        "zip-factory/zip-factory": "1.*",
-        "apfelbox/php-file-download": "~2.0"
+      }
     }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+
+    "pimple/pimple": "~1.0",
+    "psr/log": "~1.0",
+
+    "twig/twig": "~1.13",
+    "monolog/monolog": "~1.0",
+    "swiftmailer/swiftmailer": "~4.1",
+    "zefredz/htmlsanitizer": "~1.0",
+    "zip-factory/zip-factory": "~1.0",
+    "apfelbox/php-file-download": "~2.0",
+
+    "silex/silex": "~1.0",
+    "symfony/twig-bridge": "~2.3",
+    "symfony/monolog-bridge": "~2.3",
+    "symfony/form": "~2.3",
+    "symfony/translation": "~2.3",
+    "symfony/validator": "~2.3",
+    "symfony/config": "~2.3",
+    "symfony/yaml": "~2.3",
+    "symfony/security": "~2.3",
+    "symfony/debug": "~2.3",
+    "symfony/console": "~2.3",
+    "symfony/finder": "~2.3",
+    "symfony/filesystem": "~2.3",
+    "symfony/process": "~2.3",
+    "silex/web-profiler": "~1.0.1"
+  },
+  "require-dev": {
+    "sensiolabs/security-checker": "~2.0"
+  }
 }
