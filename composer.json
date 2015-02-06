@@ -1,4 +1,13 @@
 {
+  "name": "Claroline Archiver",
+  "description": "A tool to archive Claroline course contents",
+  "license": "GNU AGPLv3",
+  "authors": [
+      {
+          "name": "Frederic Minne",
+          "email": "zefredz@gmail.com"
+      }
+  ],
   "repositories": [
     {
       "type": "package",
