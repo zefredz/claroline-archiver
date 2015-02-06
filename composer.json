@@ -1,7 +1,7 @@
 {
-  "name": "Claroline Archiver",
+  "name": "claroline-archiver",
   "description": "A tool to archive Claroline course contents",
-  "license": "GNU AGPLv3",
+  "license": "AGPL-3.0",
   "authors": [
       {
           "name": "Frederic Minne",
