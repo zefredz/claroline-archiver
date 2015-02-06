@@ -5,7 +5,12 @@ use Silex\Provider\TwigServiceProvider;
 
 $app = new Silex\Application();
 
-require __DIR__ .'/config/prod.php';
+if ( $env === 'development' ) {
+  require __DIR__ .'/config/dev.php';
+}
+else {
+  require __DIR__ .'/config/prod.php';
+}
 
 $app->register(new HttpCacheServiceProvider());
 
