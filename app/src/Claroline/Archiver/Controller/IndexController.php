@@ -12,11 +12,6 @@ class IndexController {
     }
 
     public function index() {
-        
-        if ( func_num_args() ) {
-            var_dump(func_get_args());
-        }
-
         return $this->app['twig']->render('index.html.twig');
     }
 }
