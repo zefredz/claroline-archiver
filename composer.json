@@ -3,10 +3,10 @@
   "description": "A tool to archive Claroline course contents",
   "license": "AGPL-3.0",
   "authors": [
-      {
-          "name": "Frederic Minne",
-          "email": "zefredz@gmail.com"
-      }
+    {
+      "name": "Frederic Minne",
+      "email": "zefredz@gmail.com"
+    }
   ],
   "repositories": [
     {
@@ -55,6 +55,13 @@
     "silex/web-profiler": "~1.0.1"
   },
   "require-dev": {
-    "sensiolabs/security-checker": "~2.0"
+    "sensiolabs/security-checker": "~2.0",
+    "phpunit/phpunit": "~3.7",
+    "symfony/browser-kit": "~2.3"
+  },
+  "autoload": {
+    "psr-0": {
+      "Claroline\\Archiver\\": "app/src/"
+    }
   }
 }

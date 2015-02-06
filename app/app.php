@@ -1,8 +1,5 @@
 <?php
 
-use Silex\Provider\HttpCacheServiceProvider;
-use Silex\Provider\TwigServiceProvider;
-
 $app = new Silex\Application();
 
 if ( $env === 'development' ) {
@@ -12,9 +9,11 @@ else {
   require __DIR__ .'/config/prod.php';
 }
 
-$app->register(new HttpCacheServiceProvider());
+$app->register(new Silex\Provider\ServiceControllerServiceProvider());
 
-$app->register(new TwigServiceProvider(), array(
+$app->register(new Silex\Provider\HttpCacheServiceProvider());
+
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.options'        => array(
     'cache'            => isset($app['twig.options.cache']) ? $app['twig.options.cache'] : false,
     'strict_variables' => true
