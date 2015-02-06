@@ -33,7 +33,7 @@
 
     "twig/twig": "~1.13",
     "monolog/monolog": "~1.0",
-    "swiftmailer/swiftmailer": "~4.1",
+    "swiftmailer/swiftmailer": "~5.2",
     "zefredz/htmlsanitizer": "~1.0",
     "zip-factory/zip-factory": "~1.0",
     "apfelbox/php-file-download": "~2.0",
