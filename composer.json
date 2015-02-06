@@ -18,6 +18,7 @@
     ],
     "require": {
         "zefredz/htmlsanitizer": "1.*",
-        "zip-factory/zip-factory": "1.*"
+        "zip-factory/zip-factory": "1.*",
+        "apfelbox/php-file-download": "~2.0"
     }
 }
