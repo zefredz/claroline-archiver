@@ -1,5 +1,5 @@
 <?php
 
-$app->match('/', function() use ($app) {
+$app->match('/', function() {
   return 'It works!';
 })->bind('homepage');
