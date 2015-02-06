@@ -9,17 +9,17 @@ use Claroline\Archiver\Controller\IndexController;
 
 class ControllerProvider implements ControllerProviderInterface {
 
-    public function connect(Application $app) {
-      
-        $app['homepage.controller'] = $app->share(function() use ($app) {
-            return new IndexController($app);
-        });
+  public function connect(Application $app) {
 
-        // creates a new controller based on the default route
-        $controllers = $app['controllers_factory'];
+    $app['homepage.controller'] = $app->share(function() use ($app) {
+        return new IndexController($app);
+    });
 
-        $controllers->get('/', "homepage.controller:index");
+    // creates a new controller based on the default route
+    $controllers = $app['controllers_factory'];
 
-        return $controllers;
-    }
+    $controllers->get('/', "homepage.controller:index");
+
+    return $controllers;
+  }
 }
