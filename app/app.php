@@ -11,7 +11,7 @@ if (  isset ( $app['claroline.allowedenv'][$environment] ) ) {
   $app['claroline.env'] = $environment;
 }
 
-if ( $app['claroline.debug'] == true ) {
+if ( $app['claroline.debug'] === true ) {
   Symfony\Component\Debug\Debug::enable();
 }
 
