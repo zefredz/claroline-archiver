@@ -2,11 +2,25 @@
 
 $app = new Silex\Application();
 
-if ( $env === 'development' ) {
-  require __DIR__ .'/config/dev.php';
+require __DIR__ .'/config/common.php';
+
+$environment = isset( $app['claroline.env'] ) ? $app['claroline.env'] : 'production';
+
+if (  isset ( $app['claroline.allowedenv'][$environment] ) ) {
+  include __DIR__ . '/config/' . $environment . '.php';
+  $app['claroline.env'] = $environment;
 }
-else {
-  require __DIR__ .'/config/prod.php';
+
+if ( $app['claroline.debug'] == true ) {
+  Symfony\Component\Debug\Debug::enable();
+}
+
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+    'monolog.logfile' => __DIR__.'/../logs/'.$app['claroline.env'].'.log',
+));
+
+if ( ! file_exists(dirname($app['monolog.logfile'])) ) {
+  mkdir(dirname($app['monolog.logfile']));
 }
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
@@ -22,4 +36,11 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path' => array(__DIR__ . '/views')
 ));
 
-return $app;
+require __DIR__.'/../app/controllers.php';
+
+if ( $app['claroline.env'] === 'production' ) {
+  return $app['http_cache'];
+}
+else {
+  return $app;
+}
