@@ -1,6 +1,6 @@
 <?php
 
-$app = new Silex\Application();
+$app = new \Claroline\Application();
 
 require __DIR__ .'/config/common.php';
 
