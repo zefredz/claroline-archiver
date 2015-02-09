@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5aa1ce4299388360cce9156fca31b069",
+    "hash": "b4a3a8d30ef99650293d56609299f2f0",
     "packages": [
         {
             "name": "apfelbox/php-file-download",
