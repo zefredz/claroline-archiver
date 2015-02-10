@@ -20,4 +20,20 @@ $console
     $output->writeln(sprintf("%s <info>success</info>", 'cache:clear'));
 });
 
+$console
+  ->register('installer:install')
+  ->setDescription('Install the application')
+  ->setCode(function (InputInterface $input, OutputInterface $output) use ($app) {
+    
+    $cacheDir = $app['cache.path'];
+    $filesystem = new Filesystem();
+    $filesystem->mkdir($cacheDir);
+
+    $logDir = $app['log.path'];
+    $filesystem = new Filesystem();
+    $filesystem->mkdir($logDir);
+
+    $output->writeln(sprintf("%s <info>success</info>", 'installer:install'));
+});
+
 return $console;
