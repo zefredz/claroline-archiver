@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Choose a course{% endblock %}
+{% block head %}
+  {{ parent() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <dl>
+        <dt>{{ form_label(form.courseId, 'Course code'|trans ) }}{{ form_errors(form.courseId) }}</dt>
+        <dd>{{ form_widget(form.courseId) }}</dd
+    </dl>
+
+    <input type="submit" name="submit" />
+
+{{ form_end(form) }}
+{% endblock %}
