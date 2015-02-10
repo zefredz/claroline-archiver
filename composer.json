@@ -31,33 +31,45 @@
     "pimple/pimple": "~1.0",
     "psr/log": "~1.0",
 
-    "twig/twig": "~1.13",
-    "monolog/monolog": "~1.0",
-    "swiftmailer/swiftmailer": "~5.2",
     "zefredz/htmlsanitizer": "~1.0",
     "zip-factory/zip-factory": "~1.0",
     "apfelbox/php-file-download": "~2.0",
 
-    "silex/silex": "~1.0",
-    "symfony/twig-bridge": "~2.3",
-    "symfony/monolog-bridge": "~2.3",
-    "symfony/form": "~2.3",
-    "symfony/translation": "~2.3",
-    "symfony/validator": "~2.3",
-    "symfony/config": "~2.3",
-    "symfony/yaml": "~2.3",
-    "symfony/security": "~2.3",
-    "symfony/debug": "~2.3",
-    "symfony/console": "~2.3",
-    "symfony/finder": "~2.3",
-    "symfony/filesystem": "~2.3",
-    "symfony/process": "~2.3",
-    "silex/web-profiler": "~1.0.1"
+    "twig/twig": ">=1.8.0,<2.0-dev",
+    "doctrine/dbal": "~2.2",
+    "swiftmailer/swiftmailer": "5.*",
+    "monolog/monolog": "~1.4,>=1.4.1",
+
+    "silex/silex": "~1.2",
+
+    "symfony/event-dispatcher": "~2.3,<3.0",
+    "symfony/http-foundation": "~2.3,<3.0",
+    "symfony/http-kernel": "~2.3,<3.0",
+    "symfony/routing": "~2.3,<3.0",
+    "symfony/security": "~2.3,<3.0",
+    "symfony/config": "~2.3,<3.0",
+    "symfony/locale": "~2.3,<3.0",
+    "symfony/form": "~2.3,<3.0",
+    "symfony/debug": "~2.3,<3.0",
+    "symfony/dom-crawler": "~2.3,<3.0",
+    "symfony/finder": "~2.3,<3.0",
+    "symfony/monolog-bridge": "~2.3,<3.0",
+    "symfony/options-resolver": "~2.3,<3.0",
+    "symfony/process": "~2.3,<3.0",
+    "symfony/serializer": "~2.3,<3.0",
+    "symfony/translation": "~2.3,<3.0",
+    "symfony/twig-bridge": "~2.3,<3.0",
+    "symfony/validator": "~2.3,<3.0",
+    "symfony/yaml": "~2.3,<3.0",
+
+    "igorw/config-service-provider": "~1.2"
   },
   "require-dev": {
     "sensiolabs/security-checker": "~2.0",
     "phpunit/phpunit": "~3.7",
-    "symfony/browser-kit": "~2.3"
+    "symfony/browser-kit": "~2.3",
+    "symfony/css-selector": "~2.3,<3.0",
+    "silex/web-profiler": "~1.0.1"
   },
   "autoload": {
     "psr-0": {
