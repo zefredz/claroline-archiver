@@ -8,15 +8,15 @@ $app = new \Claroline\Application();
 
 $environment = getenv('APP_ENV') ?: 'development';
 
+// Common configuration options for all environments
 $app->register(
-  new Igorw\Silex\ConfigServiceProvider(
-    __DIR__."/config/common.json", array(
-      'base_path' => __DIR__.'/..')
-  )
+  new Igorw\Silex\ConfigServiceProvider(__DIR__."/config/common.json", array(
+      'base_path' => __DIR__.'/..'
+  ))
 );
+// Envirnoment specific options
 $app->register(
-  new Igorw\Silex\ConfigServiceProvider(
-    __DIR__."/config/$environment.json")
+  new Igorw\Silex\ConfigServiceProvider(__DIR__."/config/$environment.json")
 );
 
 /***********************************************
@@ -30,25 +30,36 @@ if ( $app['claroline.debug'] === true ) {
 /***********************************************
  * Register service providers
  ***********************************************/
+// Enable log
 $app->register(
   new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile' => __DIR__.'/../logs/'.$environment.'.log',
+    'monolog.logfile' => $app['log.path'].'/'.$environment.'.log',
     'monolog.level' => $app['claroline.log.level']
-));
+  )
+);
 // This should be moved in the install console command
 if ( ! file_exists(dirname($app['monolog.logfile'])) ) {
   mkdir(dirname($app['monolog.logfile']));
 }
+// Enable providers for controllers
 $app->register(
-  new Silex\Provider\ServiceControllerServiceProvider());
+  new Silex\Provider\ServiceControllerServiceProvider()
+);
+// Enable HTTP caching
 $app->register(
-  new Silex\Provider\HttpCacheServiceProvider());
+  new Silex\Provider\HttpCacheServiceProvider()
+);
+// Enable translations
 $app->register(
   new Silex\Provider\TranslationServiceProvider(), array(
     'locale_fallbacks' => array('en'),
-));
+  )
+);
+// Enable form API
 $app->register(
-  new Silex\Provider\FormServiceProvider());
+  new Silex\Provider\FormServiceProvider()
+);
+// Enable template engine
 $app->register(
   new Silex\Provider\TwigServiceProvider(), array(
     'twig.options' => array(
@@ -56,10 +67,13 @@ $app->register(
       'strict_variables' => true
     ),
     'twig.path' => array(__DIR__ . '/views')
-));
+  )
+);
+// Enable database
 $app->register(
   new \Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => $app['claroline.db_options'])
+    'db.options' => $app['claroline.db_options']
+  )
 );
 
 /***********************************************
