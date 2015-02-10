@@ -1,4 +1,5 @@
 {
   "claroline.debug": true,
-  "claroline.use_cache": false
+  "claroline.use_cache": false,
+  "claroline.log.level": "DEBUG"
 }
