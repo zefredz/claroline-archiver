@@ -1,0 +1,14 @@
+{
+  "claroline.db_options": {
+    "driver": "pdo_mysql",
+    "host": "localhost",
+    "dbname": "claroline_trunk",
+    "user": "claroline",
+    "password": "claroline",
+    "charset": "latin1"
+  },
+  "tmp.path": "%base_path%/tmp",
+  "cache.path": "%base_path%/tmp/cache",
+  "http_cache.cache_dir": "%base_path%/tmp/cache/http",
+  "twig.options.cache": "%base_path%/tmp/cache/twig"
+}
