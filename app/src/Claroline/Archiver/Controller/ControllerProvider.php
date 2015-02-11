@@ -6,8 +6,6 @@ use Silex\Application;
 use Silex\ControllerProviderInterface;
 use Monolog\Logger;
 
-use Claroline\Archiver\Controller\IndexController;
-
 class ControllerProvider implements ControllerProviderInterface {
 
   public function connect(Application $app) {

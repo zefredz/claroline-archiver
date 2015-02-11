@@ -2,8 +2,6 @@
 
 namespace Claroline\Archiver\Controller;
 
-use Doctrine\DBAL\Query\QueryBuilder;
-
 class ArchiverController {
 
   protected $app;
