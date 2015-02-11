@@ -6,7 +6,7 @@ use Claroline\Module\ModuleInterface;
 
 class Module implements ModuleInterface {
 
-  const __LABEL__ = 'claroline-kudos';
+  const LABEL = 'claroline-kudos';
 
   public function depend() {
     return array();
@@ -57,6 +57,6 @@ class Module implements ModuleInterface {
   }
 
   public function label() {
-    return self::__LABEL__;
+    return self::LABEL;
   }
 }
