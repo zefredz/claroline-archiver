@@ -1,6 +1,6 @@
 <?php
 
-namespace Claroline;
+namespace Claroline\Core;
 
 class Application extends \Silex\Application
 {

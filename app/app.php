@@ -1,6 +1,6 @@
 <?php
 
-$app = new \Claroline\Application();
+$app = new \Claroline\Core\Application();
 
 /***********************************************
  * Load configuration
