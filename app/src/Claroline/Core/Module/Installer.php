@@ -13,11 +13,11 @@ class Installer {
     $this->app = $app;
   }
 
-  public function install( \Claroline\Core\Module\ModuleInterface $module ) {
+  public function install( ModuleInterface $module ) {
 
     $schema = $this->app['db']->getSchemaManager()->createSchema();
 
-    $plateform = $this->app['db']->getDatabasePlatform();
+    $platform = $this->app['db']->getDatabasePlatform();
 
     $schema = $module->schema( $schema );
 
