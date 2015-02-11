@@ -12,24 +12,16 @@ class ControllerProvider implements ControllerProviderInterface {
 
   public function connect(Application $app) {
 
-    // creates a new controller based on the default route
     $controllers = $app['controllers_factory'];
 
-    $app->log('Loading homepage controller', array(), Logger::DEBUG);
+    // creates a new controller based on the default route
+    $app->log('Loading claroline-archiver controller', array(), Logger::DEBUG);
 
-    $app['homepage.controller'] = $app->share(function() use ($app) {
-        return new IndexController($app);
-    });
-
-    $controllers->get('/', "homepage.controller:index");
-
-    $app->log('Loading archiver controller', array(), Logger::DEBUG);
-
-    $app['archiver.controller'] = $app->share(function() use ($app) {
+    $app['claroline-archiver.controller'] = $app->share(function() use ($app) {
         return new ArchiverController($app);
     });
 
-    $controllers->get('/course', "archiver.controller:loadCourse");
+    $controllers->get('/course', "claroline-archiver.controller:loadCourse");
 
     return $controllers;
   }

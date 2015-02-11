@@ -1,6 +1,6 @@
 <?php
 
-namespace Claroline\Archiver\Controller;
+namespace Claroline\Core\Controller;
 
 class IndexController {
 
