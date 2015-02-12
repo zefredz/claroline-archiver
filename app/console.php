@@ -5,8 +5,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
-
-use Doctrine\DBAL\Migrations\MigrationsVersion;
+// doctrine/migrations
 use Doctrine\DBAL\Migrations\Tools\Console\Command as MigrationsCommand;
 
 $console = new Console\Application('Claroline Archiver', '0.1');
