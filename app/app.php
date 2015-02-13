@@ -1,6 +1,9 @@
 <?php
 
-$app = new \Claroline\Core\Application();
+use Symfony\Component\Finder\Finder;
+use Silex\Application;
+
+$app = new Application();
 
 /***********************************************
  * Load configuration
@@ -83,7 +86,14 @@ $app->register(
  * Register controllers
  ***********************************************/
 
-require __DIR__.'/../app/controllers.php';
+ $core = new Claroline\Core\Controller\ControllerProvider();
+ $app->register($core);
+ $app->mount('/', $core);
+
+ // load modules
+
+ $moduleLoader = new Claroline\Core\Module\Loader();
+ $moduleLoader->load( $app );
 
 /***********************************************
  * Serve the pages
