@@ -1,6 +1,5 @@
 <?php
 
-use Symfony\Component\Finder\Finder;
 use Silex\Application;
 
 $app = new Application();
