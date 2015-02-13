@@ -1,7 +1,13 @@
 <?php
 
-$app->mount('/', new Claroline\Core\Controller\ControllerProvider());
+$core = new Claroline\Core\Controller\ControllerProvider();
+$app->register($core);
+$app->mount('/', $core);
 
-$app->mount('/archiver', new Claroline\Archiver\Controller\ControllerProvider());
+$archiver = new Claroline\Archiver\Controller\ControllerProvider();
+$app->register($archiver);
+$app->mount('/archiver', $archiver);
 
-$app->mount('/kudos', new Claroline\Kudos\Controller\ControllerProvider());
+$kudos = new Claroline\Kudos\Controller\ControllerProvider();
+$app->register( $kudos );
+$app->mount('/kudos', $kudos );
