@@ -10,16 +10,17 @@ class Loader {
   protected $loaded = array();
 
   public function load( Application $app ) {
+    
     $finder = Finder::create()->files()->in($app['claroline.modules.path'])->name('*.php')->sortByName();
 
     foreach ( $finder as $file ) {
       $module = include_once $file->getRealpath();
-      if ( call_user_func( $module, $app ) ) {
-        $this->loaded[] = $file->getFilename();
-        $app['monolog']->addDebug("Module {$file->getFilename()} loaded.");
+      if ( $moduleName = call_user_func( $module, $app ) ) {
+        $this->loaded[] = $moduleName;
+        $app['monolog']->addDebug("Module {$moduleName} loaded.");
       }
       else {
-        $app['monolog']->addError("Failed to load module {$file->getFilename()}.");
+        $app['monolog']->addError("Failed to load module from {$file->getFilename()}.");
       }
     }
   }
