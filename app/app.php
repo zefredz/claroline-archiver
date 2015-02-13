@@ -7,7 +7,7 @@ $app = new \Claroline\Core\Application();
  ***********************************************/
 
 $app['claroline.app.path'] = __DIR__;
-$app['claroline.modules.path'] = __DIR__ . '/modules-enabled';
+$app['claroline.modules.path'] = __DIR__ . '/modules';
 
 $environment = getenv('APP_ENV') ?: 'development';
 
