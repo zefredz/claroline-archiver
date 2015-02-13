@@ -1,6 +1,16 @@
 # claroline-archiver
 archive tool for claroline
 
+## Architecture
+
+app/config : config files for the application
+module/*.php : module init functions for the modules
+
+## Roadmap
+
+* Split views into views/MODULENAME and views/core
+* Split config into config/MODULENAME and config/core and load them module init functions
+
 ## Some useful links :
 
 ### Silex best practices
