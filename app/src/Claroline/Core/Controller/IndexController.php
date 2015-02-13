@@ -2,11 +2,13 @@
 
 namespace Claroline\Core\Controller;
 
+use Silex\Application;
+
 class IndexController {
 
   protected $app;
 
-  public function __construct( $app ) {
+  public function __construct( Application $app ) {
     $this->app = $app;
   }
 

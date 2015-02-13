@@ -2,11 +2,13 @@
 
 namespace Claroline\Archiver\Controller;
 
+use Silex\Application;
+
 class ArchiverController {
 
   protected $app;
 
-  public function __construct( $app ) {
+  public function __construct( Application $app ) {
     $this->app = $app;
   }
 
@@ -31,7 +33,7 @@ class ArchiverController {
         'courseId' => ''
     );
 
-    $form = $this->app->form($data)
+    $form = $this->app['form.factory']->createBuilder('form', $data )
       ->setAction('/archiver/course/search')
       ->add('courseId', 'choice', array(
         'choices' => $choices,
@@ -40,7 +42,7 @@ class ArchiverController {
       ))
       ->getForm();
 
-    return $this->app->render(
+    return $this->app['twig']->render(
       'courseform.html.twig',
       array(
         'form'=>$form->createView()

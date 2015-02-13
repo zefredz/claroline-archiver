@@ -6,6 +6,9 @@ $app = new \Claroline\Core\Application();
  * Load configuration
  ***********************************************/
 
+$app['claroline.app.path'] = __DIR__;
+$app['claroline.modules.path'] = __DIR__ . '/modules-enabled';
+
 $environment = getenv('APP_ENV') ?: 'development';
 
 // Common configuration options for all environments

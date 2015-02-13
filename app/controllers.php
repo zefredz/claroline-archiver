@@ -1,13 +1,12 @@
 <?php
 
+use Symfony\Component\Finder\Finder;
+
 $core = new Claroline\Core\Controller\ControllerProvider();
 $app->register($core);
 $app->mount('/', $core);
 
-$archiver = new Claroline\Archiver\Controller\ControllerProvider();
-$app->register($archiver);
-$app->mount('/archiver', $archiver);
+// load modules
 
-$kudos = new Claroline\Kudos\Controller\ControllerProvider();
-$app->register( $kudos );
-$app->mount('/kudos', $kudos );
+$moduleLoader = new Claroline\Core\Module\Loader();
+$moduleLoader->load( $app );
