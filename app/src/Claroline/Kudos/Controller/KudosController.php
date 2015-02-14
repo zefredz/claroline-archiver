@@ -4,15 +4,18 @@ namespace Claroline\Kudos\Controller;
 
 use Silex\Application;
 
+/**
+ * Kudos controller
+ * @package claroline-kudos
+ */
 class KudosController {
 
-  protected $app;
-
-  public function __construct( Application $app ) {
-    $this->app = $app;
-  }
-
-  public function index() {
-    return $this->app['twig']->render('index.html.twig');
+  /**
+   * Serve the index page of the kudos module
+   * @param  Silex\Application $app
+   * @return page output
+   */
+  public function index(Application $app) {
+    return $app['twig']->render('index.html.twig');
   }
 }

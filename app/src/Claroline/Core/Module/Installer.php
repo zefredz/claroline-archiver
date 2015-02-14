@@ -4,20 +4,17 @@ namespace Claroline\Module;
 
 use Claroline\Core\ModuleInterface;
 
+/**
+ * Module installer
+ * @package claroline-core
+ */
 class Installer {
 
-  protected $app;
+  public function install( Application $app, ModuleInterface $module ) {
 
-  public function __construct( $app ) {
+    $schema = $app['db']->getSchemaManager()->createSchema();
 
-    $this->app = $app;
-  }
-
-  public function install( ModuleInterface $module ) {
-
-    $schema = $this->app['db']->getSchemaManager()->createSchema();
-
-    $platform = $this->app['db']->getDatabasePlatform();
+    $platform = $app['db']->getDatabasePlatform();
 
     $schema = $module->schema( $schema );
 
