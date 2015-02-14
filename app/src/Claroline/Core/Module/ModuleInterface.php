@@ -2,6 +2,10 @@
 
 namespace Claroline\Module;
 
+/**
+ * Interface for a module
+ * @package claroline-core
+ */
 interface ModuleInterface {
 
   /**
