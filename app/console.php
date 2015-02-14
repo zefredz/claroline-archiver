@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file Console based application.
+ */
+
 use Symfony\Component\Console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -30,6 +34,7 @@ foreach ($commands as $command) {
 
 $console->addCommands($commands);
 
+// Cache clear command
 $console
   ->register('cache:clear')
   ->setDescription('Clears the cache')
@@ -43,6 +48,7 @@ $console
     $output->writeln(sprintf("%s <info>success</info>", 'cache:clear'));
 });
 
+// Install command
 $console
   ->register('installer:install')
   ->setDescription('Install the application')

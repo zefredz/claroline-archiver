@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file Web based/RESTful application
+ */
+
 use Silex\Application;
 
 $app = new Application();
