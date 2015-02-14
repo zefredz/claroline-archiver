@@ -3,6 +3,7 @@
 namespace Claroline\Module;
 
 use Claroline\Core\ModuleInterface;
+use Silex\Application;
 
 /**
  * Module installer
