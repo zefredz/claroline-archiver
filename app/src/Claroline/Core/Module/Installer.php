@@ -11,6 +11,12 @@ use Silex\Application;
  */
 class Installer {
 
+  /**
+   * Install a module
+   * @param  Silex\Application     $app
+   * @param  Claroline\Core\ModuleInterface $module
+   * @return void
+   */
   public function install( Application $app, ModuleInterface $module ) {
 
     $schema = $app['db']->getSchemaManager()->createSchema();
