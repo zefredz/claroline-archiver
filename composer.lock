@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dcb1aff080de25796e55fff1980acb50",
+    "hash": "c7637dd1ea428129f68c69e5c5fac690",
     "packages": [
         {
             "name": "apfelbox/php-file-download",
@@ -583,6 +583,62 @@
             "time": "2015-01-19 02:26:02"
         },
         {
+            "name": "fxp/composer-asset-plugin",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/francoispluchino/composer-asset-plugin.git",
+                "reference": "dbc856439a09f07987de673aa8a264c1b88b0c6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/francoispluchino/composer-asset-plugin/zipball/dbc856439a09f07987de673aa8a264c1b88b0c6b",
+                "reference": "dbc856439a09f07987de673aa8a264c1b88b0c6b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0@dev"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Fxp\\Composer\\AssetPlugin\\FxpAssetPlugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fxp\\Composer\\AssetPlugin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Pluchino",
+                    "email": "francois.pluchino@gmail.com"
+                }
+            ],
+            "description": "NPM/Bower Dependency Manager for Composer",
+            "homepage": "https://github.com/francoispluchino/composer-asset-plugin",
+            "keywords": [
+                "asset",
+                "bower",
+                "composer",
+                "dependency manager",
+                "nodejs",
+                "npm",
+                "package"
+            ],
+            "time": "2015-01-25 13:24:06"
+        },
+        {
             "name": "igorw/config-service-provider",
             "version": "v1.2.2",
             "source": {
@@ -638,6 +694,163 @@
                 "silex"
             ],
             "time": "2014-07-06 10:59:11"
+        },
+        {
+            "name": "jasongrimes/paginator",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasongrimes/php-paginator.git",
+                "reference": "b3df7160d5baa6a3e2bb6b1f359dd0447ebc3561"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasongrimes/php-paginator/zipball/b3df7160d5baa6a3e2bb6b1f359dd0447ebc3561",
+                "reference": "b3df7160d5baa6a3e2bb6b1f359dd0447ebc3561",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JasonGrimes": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Grimes",
+                    "email": "jason@grimesit.com"
+                }
+            ],
+            "description": "A lightweight PHP paginator, for generating pagination controls in the style of Stack Overflow and Flickr. The 'first' and 'last' page links are shown inline as page numbers, and excess page numbers are replaced by ellipses.",
+            "homepage": "http://github.com/jasongrimes/php-paginator",
+            "keywords": [
+                "pager",
+                "pagination",
+                "paginator"
+            ],
+            "time": "2014-10-13 01:34:54"
+        },
+        {
+            "name": "jasongrimes/silex-simpleuser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasongrimes/silex-simpleuser.git",
+                "reference": "7485d824d38455140247e0d1cb65817643342792"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasongrimes/silex-simpleuser/zipball/7485d824d38455140247e0d1cb65817643342792",
+                "reference": "7485d824d38455140247e0d1cb65817643342792",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.4",
+                "jasongrimes/paginator": "~1.0",
+                "php": ">=5.3.0",
+                "silex/silex": "~1.0",
+                "swiftmailer/swiftmailer": "~5.3",
+                "symfony/security": "~2.3",
+                "symfony/twig-bridge": "~2.3"
+            },
+            "require-dev": {
+                "ext-pdo_sqlite": "*",
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SimpleUser": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Grimes",
+                    "email": "jason@grimesit.com"
+                }
+            ],
+            "description": "A simple database-backed user provider for Silex, with associated services and controllers.",
+            "homepage": "http://github.com/jasongrimes/silex-simpleuser",
+            "keywords": [
+                "silex",
+                "simple user provider",
+                "user",
+                "user provider"
+            ],
+            "time": "2014-11-01 23:40:32"
+        },
+        {
+            "name": "jyggen/persona",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jyggen/persona.git",
+                "reference": "96f4aadba8f5f7d3ce8ee26a0b2dde7103e70b65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jyggen/persona/zipball/96f4aadba8f5f7d3ce8ee26a0b2dde7103e70b65",
+                "reference": "96f4aadba8f5f7d3ce8ee26a0b2dde7103e70b65",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "orchestra/testbench": "~2.0",
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jyggen\\Persona": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Stendahl",
+                    "email": "jonas.stendahl@gmail.com",
+                    "homepage": "http://jyggen.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A framework agnostic implementation of Mozilla Persona, the cross-browser login system for the Web that's easy to use and easy to deploy.",
+            "keywords": [
+                "Authentication",
+                "BrowserID",
+                "Mozilla Persona",
+                "Persona",
+                "auth",
+                "laravel",
+                "login",
+                "mozilla"
+            ],
+            "time": "2014-06-26 22:47:44"
         },
         {
             "name": "monolog/monolog",
@@ -3110,7 +3323,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "doctrine/migrations": 20
+        "jyggen/persona": 20,
+        "doctrine/migrations": 20,
+        "jasongrimes/silex-simpleuser": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
