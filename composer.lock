@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7637dd1ea428129f68c69e5c5fac690",
+    "hash": "1dd4d5ce143e7d6179ad4bf53e1d092d",
     "packages": [
         {
             "name": "apfelbox/php-file-download",
@@ -742,16 +742,16 @@
         },
         {
             "name": "jasongrimes/silex-simpleuser",
-            "version": "dev-master",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jasongrimes/silex-simpleuser.git",
-                "reference": "7485d824d38455140247e0d1cb65817643342792"
+                "reference": "a44e80a4731f64c3b6304268a7695261d06dd234"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jasongrimes/silex-simpleuser/zipball/7485d824d38455140247e0d1cb65817643342792",
-                "reference": "7485d824d38455140247e0d1cb65817643342792",
+                "url": "https://api.github.com/repos/jasongrimes/silex-simpleuser/zipball/a44e80a4731f64c3b6304268a7695261d06dd234",
+                "reference": "a44e80a4731f64c3b6304268a7695261d06dd234",
                 "shasum": ""
             },
             "require": {
@@ -760,8 +760,10 @@
                 "php": ">=5.3.0",
                 "silex/silex": "~1.0",
                 "swiftmailer/swiftmailer": "~5.3",
+                "symfony/form": "~2.3",
                 "symfony/security": "~2.3",
-                "symfony/twig-bridge": "~2.3"
+                "symfony/twig-bridge": "~2.3",
+                "symfony/validator": "~2.3"
             },
             "require-dev": {
                 "ext-pdo_sqlite": "*",
@@ -791,7 +793,7 @@
                 "user",
                 "user provider"
             ],
-            "time": "2014-11-01 23:40:32"
+            "time": "2015-01-13 15:05:51"
         },
         {
             "name": "jyggen/persona",
