@@ -39,12 +39,13 @@
     "apfelbox/php-file-download": "~2.0",
 
     "twig/twig": ">=1.8.0,<2.0-dev",
-    "doctrine/dbal": "~2.2",
-    "doctrine/migrations": "1.0.*@dev",
     "swiftmailer/swiftmailer": "5.*",
     "monolog/monolog": "~1.4,>=1.4.1",
+    "illuminate/database": "~5.0",
 
     "silex/silex": "~1.2",
+
+    "sjdaws/silluminate": "dev-master",
 
     "symfony/event-dispatcher": "~2.3,<3.0",
     "symfony/http-foundation": "~2.3,<3.0",
