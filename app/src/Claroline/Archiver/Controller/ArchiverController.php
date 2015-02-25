@@ -18,7 +18,7 @@ class ArchiverController {
   public function index(Application $app) {
     return $app['twig']->render('index.html.twig');
   }
-  
+
   /**
    * Serve the course loading page
    * @param  Silex\Application $app
@@ -26,14 +26,18 @@ class ArchiverController {
    */
   public function loadCourse(Application $app) {
 
-    $queryBuilder = $app['db']->createQueryBuilder();
+    /* $queryBuilder = $app['db']->createQueryBuilder();
 
     $query = $queryBuilder
       ->select('code')
       ->from('cl_cours')
       ->getSQL();
 
-    $results = $app['db']->fetchAll($query);
+    $results = $app['db']->fetchAll($query); */
+
+    $rsult = array(
+      array('code' => 'TEST')
+    );
 
     $choices = array();
 

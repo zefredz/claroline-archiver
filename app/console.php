@@ -9,8 +9,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
-// doctrine/migrations
-use Doctrine\DBAL\Migrations\Tools\Console\Command as MigrationsCommand;
 
 $console = new Console\Application('Claroline Archiver', '0.1');
 
@@ -18,21 +16,6 @@ $helperSet = new Console\Helper\HelperSet();
 $helperSet->set(new Console\Helper\DialogHelper(), 'dialog');
 $console->setHelperSet($helperSet);
 
-// Add Migrations commands
-$commands = array();
-$commands[] = new MigrationsCommand\ExecuteCommand();
-$commands[] = new MigrationsCommand\GenerateCommand();
-$commands[] = new MigrationsCommand\LatestCommand();
-$commands[] = new MigrationsCommand\MigrateCommand();
-$commands[] = new MigrationsCommand\StatusCommand();
-$commands[] = new MigrationsCommand\VersionCommand();
-
-// remove the "migrations:" prefix on each command name
-foreach ($commands as $command) {
-    $command->setName(str_replace('migrations:', '', $command->getName()));
-}
-
-$console->addCommands($commands);
 
 // Cache clear command
 $console
