@@ -26,15 +26,6 @@ class ArchiverController {
    */
   public function loadCourse(Application $app) {
 
-    /* $queryBuilder = $app['db']->createQueryBuilder();
-
-    $query = $queryBuilder
-      ->select('code')
-      ->from('cl_cours')
-      ->getSQL();
-
-    $results = $app['db']->fetchAll($query); */
-
     $rsult = array(
       array('code' => 'TEST')
     );
