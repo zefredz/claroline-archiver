@@ -26,7 +26,7 @@ class ArchiverController {
    */
   public function loadCourse(Application $app) {
 
-    $rsult = array(
+    $result = array(
       array('code' => 'TEST')
     );
 
