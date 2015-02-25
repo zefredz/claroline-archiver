@@ -5,7 +5,9 @@
     "dbname": "claroline_trunk",
     "user": "claroline",
     "password": "claroline",
-    "charset": "latin1"
+    "charset" : "latin1",
+    "collation" : "latin1_swedish_ci",
+    "prefix" : null
   },
   "tmp.path": "%base_path%/tmp",
   "cache.path": "%base_path%/tmp/cache",
