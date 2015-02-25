@@ -20,11 +20,9 @@ module/*.php : module init functions for the modules
 
 ### Providers
 
-* https://github.com/jasongrimes/silex-simpleuser and https://packagist.org/packages/jasongrimes/silex-simpleuser
+* https://github.com/silexphp/Silex-WebProfiler
 
-### Doctrine, Migrations and DBAL
+### Illuminate, Eloquent, Silluminate
 
-* http://akrabat.com/php/using-doctrine-migrations-outside-of-doctrine-orm-or-symfony/
-* http://www.codediesel.com/mysql/creating-sql-schemas-with-doctrine-dbal/
-* http://doctrine-dbal.readthedocs.org/en/latest/reference/schema-representation.html
-* http://www.craftitonline.com/2014/09/doctrine-migrations-with-schema-api-without-symfony-symfony-cmf-seobundle-sylius-example/
+* https://github.com/sjdaws/silluminate
+* https://github.com/illuminate/database
