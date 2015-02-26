@@ -26,14 +26,18 @@ class ArchiverController {
    */
   public function loadCourse(Application $app) {
 
+    $courses = $app['db']->connection()->table('cours')->select('code', 'intitule as title')->get();
+
+    // var_dump($courses);
+
     $results = array(
       array('code' => 'TEST')
     );
 
     $choices = array();
 
-    foreach ( $results as $row ) {
-      $choices[] = $row['code'];
+    foreach ( $courses as $course ) {
+      $choices[$course->code] = utf8_encode($course->title);
     }
 
     $data = array(
