@@ -28,12 +28,6 @@ class ArchiverController {
 
     $courses = $app['db']->connection()->table('cours')->select('code', 'intitule as title')->get();
 
-    // var_dump($courses);
-
-    $results = array(
-      array('code' => 'TEST')
-    );
-
     $choices = array();
 
     foreach ( $courses as $course ) {
