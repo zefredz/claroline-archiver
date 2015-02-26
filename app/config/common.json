@@ -1,13 +1,13 @@
 {
   "claroline.db_options": {
-    "driver": "pdo_mysql",
+    "driver": "mysql",
     "host": "localhost",
-    "dbname": "claroline_trunk",
-    "user": "claroline",
+    "database": "claroline_trunk",
+    "username": "claroline",
     "password": "claroline",
     "charset" : "latin1",
     "collation" : "latin1_swedish_ci",
-    "prefix" : null
+    "prefix" : "cl_"
   },
   "tmp.path": "%base_path%/tmp",
   "cache.path": "%base_path%/tmp/cache",
