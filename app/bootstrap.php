@@ -81,7 +81,7 @@ $app['db.config'] = array(
   )
 );
 
-$app->register(new \Sjdaws\Silluminate\DatabaseServiceProvider());
+$app->register(new \Claroline\Core\DatabaseServiceProvider());
 
 /// debug
 
@@ -90,7 +90,6 @@ if ( $environment === 'development' ) {
     'profiler.cache_dir' => __DIR__.'/../tmp/cache/profiler',
     'profiler.mount_prefix' => '/_profiler', // this is the default
   ));
-  $app->register(new \Sjdaws\Silluminate\DatabaseDataCollectorServiceProvider());
 }
 
 return $app;
