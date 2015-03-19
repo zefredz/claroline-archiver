@@ -65,8 +65,6 @@
     "symfony/validator": "~2.3,<3.0",
     "symfony/yaml": "~2.3,<3.0",
 
-    "jasongrimes/silex-simpleuser": "~2.0",
-
     "igorw/config-service-provider": "~1.2"
   },
   "require-dev": {
