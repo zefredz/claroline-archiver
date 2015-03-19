@@ -45,8 +45,6 @@
 
     "silex/silex": "~1.2",
 
-    "sjdaws/silluminate": "dev-master",
-
     "symfony/event-dispatcher": "~2.3,<3.0",
     "symfony/http-foundation": "~2.3,<3.0",
     "symfony/http-kernel": "~2.3,<3.0",
