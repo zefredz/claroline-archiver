@@ -80,5 +80,11 @@
     "psr-0": {
       "Claroline\\": "app/src/"
     }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "web/assets/vendor",
+      "bower-asset-library": "web/assets/vendor"
+    }
   }
 }
