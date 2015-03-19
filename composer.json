@@ -65,7 +65,9 @@
     "symfony/validator": "~2.3,<3.0",
     "symfony/yaml": "~2.3,<3.0",
 
-    "igorw/config-service-provider": "~1.2"
+    "igorw/config-service-provider": "~1.2",
+
+    "bower-asset/bootstrap": "~3.3"
   },
   "require-dev": {
     "sensiolabs/security-checker": "~2.0",
